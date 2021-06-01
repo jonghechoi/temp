@@ -120,7 +120,7 @@ pipeline {
 
             dir ('./server'){
                 sh """
-                docker build . -t server --build-arg env=${ENV}
+                docker build . -t server 
                 """
                 // docker build . -t server --build-arg env=${PROD}
             }
