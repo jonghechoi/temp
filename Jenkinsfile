@@ -141,9 +141,10 @@ pipeline {
 
             dir ('./server'){
                 sh '''
-                docker rm -f $(docker ps -aq)
+                
                 docker run -p 80:80 -d server
                 '''
+                // docker rm -f $(docker ps -aq)
             }
           }
 
